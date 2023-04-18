@@ -1,15 +1,15 @@
 <template>
   <header>
     <nav>
-      <div class="grid lg:grid-cols-5 md:grid-cols-5 grid-cols-1 w-10/12 mx-auto py-5 gap-10">
-        <div class="logo flex items-center space-x-3">
+      <div class="grid lg:grid-cols-12 md:grid-cols-5 grid-cols-1 w-10/12 mx-auto py-5 gap-10">
+        <div class="logo flex items-center space-x-3 col-span-3">
           <router-link to="/"><img src="../assets/logo.svg" alt=""></router-link>
           <div class="line"></div>
           <span class="text-white text-left">Производитель <br>
           инженерной сантехники <br>
           с 17 летним опытом</span>
         </div>
-        <div class="col-span-3">
+        <div class="col-span-6">
           <div class="menu space-x-3">
             <a href="#">Системы</a>
             <a href="#">Услуги</a>
@@ -24,7 +24,7 @@
             <span>Звонок бесплатный <br>Пн-Пт 9:00-18:00 </span>
           </div>
         </div>
-        <div class="btn flex flex-col">
+        <div class="btn flex flex-col col-span-3">
           <a href="#" class="px-3 py-2">
             Заказать обратный звонок
           </a>

@@ -26,7 +26,7 @@
     transition: background-color 0.3s;
 }
 .vue-slider:hover .vue-slider-process {
-    background-color: #224386;
+    background-color: #69c0ff;
 }
 
 /* mark style */
@@ -38,10 +38,10 @@
     background-color: #fff;
 }
 .vue-slider-mark-step-active {
-    box-shadow: 0 0 0 2px #224386;
+    box-shadow: 0 0 0 2px #9cd5ff;
 }
 .vue-slider:hover .vue-slider-mark-step-active {
-    box-shadow: 0 0 0 2px #224386;
+    box-shadow: 0 0 0 2px #69c0ff;
 }
 
 .vue-slider-mark-label {
@@ -54,28 +54,28 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background-color: #224386;
-    border: 2px solid #224386;
+    background-color: #fff;
+    border: 2px solid #9cd5ff;
     box-sizing: border-box;
     transition: box-shadow 0.3s, border-color 0.3s;
 }
 .vue-slider:hover .vue-slider-dot-handle {
-    border-color: #224386;
+    border-color: #69c0ff;
 }
 
 .vue-slider-dot-handle-focus {
-    border-color: #224386;
+    border-color: #36abff;
     box-shadow: 0 0 0 5px rgba(54, 171, 255, 0.2);
 }
 .vue-slider:hover .vue-slider-dot-handle-focus {
-    border-color: #224386;
+    border-color: #36abff;
 }
 
 .vue-slider-dot-handle:hover {
-    border-color: #224386;
+    border-color: #36abff;
 }
 .vue-slider:hover .vue-slider-dot-handle:hover {
-    border-color: #224386;
+    border-color: #36abff;
 }
 
 .vue-slider-dot-handle-disabled {

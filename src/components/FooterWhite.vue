@@ -91,17 +91,39 @@
         <a href="#">Политика конфеденциальности</a>
       </div>
     </div>
-    <div class="py-5 border-t border-gray-100 flex flex-wrap justify-center items-center space-x-3">
+    <div class="cookie py-5 border-t border-gray-100 flex flex-wrap justify-center items-center space-x-3">
       <span class="text-sm font-bold text-center">Мы используем файлы cookie для вашего удобства пользования сайтом и повышения качества рекомендаций.</span>
       <a href="#" class="text-blue-500 text-sm font-bold">Подробнее</a>
-      <button class="border border-gray-400 text-gray-400 text-sm font-bold py-2 px-4 rounded">Я согласен</button>
+      <button @click="deleteDiv" class="border border-gray-400 text-gray-400 text-sm font-bold py-2 px-4 rounded">Я согласен</button>
     </div>
   </footer>
 </template>
 
 <script>
-export default {
+import {onMounted, ref} from "vue";
 
+export default {
+  setup() {
+    const divDeleted = ref(localStorage.getItem('divDeleted'));
+
+    const deleteDiv = () => {
+      document.querySelector('.cookie').remove();
+
+      localStorage.setItem('divDeleted', true);
+
+      divDeleted.value = true;
+    }
+
+    onMounted(() => {
+      if (divDeleted.value) {
+        document.querySelector('.cookie').remove();
+      }
+    });
+
+    return {
+      deleteDiv
+    }
+  }
 }
 </script>
 

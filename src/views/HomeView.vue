@@ -176,7 +176,7 @@
         </div>
         <div class="mt-10 w-full">
           <form action="">
-            <div class="lg:flex-nowrap md:flex-nowrap flex-wrap lg:space-x-5 md:space-x-5 space-x-0 ld:space-y-0 md:space-y-0 space-y-5">
+            <div class="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 lg:space-x-5 md:space-x-5 space-x-0 ld:space-y-0 md:space-y-0 space-y-5">
               <div class="flex flex-col w-full">
                 <label for="name">Имя*</label>
                 <input type="text" id="name" placeholder="Введите имя" class="outline-none w-full">
@@ -209,7 +209,7 @@
                 :breakpoints="{
                 // when window width is >= 320px
                 320: {
-                slidesPerView: 2,
+                slidesPerView: 1,
                 spaceBetween: 20
                 },
                 // when window width is >= 480px
@@ -244,11 +244,7 @@
             <span class="font-bold text-xl" style="color: #1DBE40">Выгода 62 ₽</span>
             <hr class="pb-2 mt-2">
             <div class="flex justify-between items-center">
-              <div class="flex items-center space-x-3">
-                <button class="bg-gray-200 w-9 rounded h-9 text-4xl flex items-center justify-center">-</button>
-                <span>99</span>
-                <button class="bg-gray-200 w-9 rounded h-9 text-4xl flex items-center justify-center">+</button>
-              </div>
+              <AppCount />
               <a href="#" class="block rounded py-3 px-4 text-white font-bold" style="background: #224386;">В корзину</a>
             </div>
           </swiper-slide>
@@ -336,8 +332,23 @@
       </div>
       <div class="body mt-20">
         <div class="grid lg:grid-cols-4 md:grid-cols-4 grid-cols-1 items-center gap-10">
-          <div class="col-span-3">
+          <div class="col-span-3 relative">
             <img src="../assets/map.svg" alt="">
+            <div class="bg-white rounded-lg shadow-2xl p-3 inline-block absolute top-0 left-28">
+              <h2 class="text-xl text-color-main font-medium text-sm">Москва</h2>
+              <span class="text-sm font-light leading-4 block my-1 text-xs">Московская область, <br> г.о. Егорьевск, c.Лелечи, стр.61Б</span>
+              <a href="tel:+7 (495) 540 52 62" class="font-bold block text-sm">+7 (495) 540 52 62</a>
+            </div>
+            <div class="bg-white rounded-lg shadow-2xl p-3 inline-block absolute bottom-24 left-0">
+              <h2 class="text-xl text-color-main font-medium text-sm">Краснодар</h2>
+              <span class="text-sm font-light leading-4 block my-1 text-xs">Прикубанский округ, Майский <br> проезд, 16/2</span>
+              <a href="tel:+7 (861) 202-52-32" class="font-bold block text-sm">+7 (861) 202-52-32</a>
+            </div>
+            <div class="bg-white rounded-lg shadow-2xl p-3 inline-block absolute top-1/3 right-1/3">
+              <h2 class="text-xl text-color-main font-medium text-sm">Новосибирск</h2>
+              <span class="text-sm font-light leading-4 block my-1 text-xs">​Ленинский район, ул. Станционная <br>, д. 60/9</span>
+              <a href="tel:++7 (383) 383 04 14" class="font-bold block text-sm">+7 (383) 383 04 14</a>
+            </div>
           </div>
           <div>
             <div class="relative">
@@ -421,9 +432,11 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation } from 'swiper';
 import FooterBlack from "@/components/FooterBlack";
+import AppCount from "@/components/AppCount";
 
 export default {
   components: {
+    AppCount,
     FooterBlack,
     Swiper,
     SwiperSlide,
